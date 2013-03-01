@@ -7,6 +7,7 @@ import decobat.Plan;
 import decobat.Project;
 import decobat.ProjectCategory;
 
+import decobat.ProjectRevision;
 import java.util.Collection;
 import java.util.Date;
 
@@ -153,7 +154,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Project> projectRevisions;
+	protected EList<ProjectRevision> projectRevisions;
 
 	/**
 	 * The cached value of the '{@link #getProjectCategories() <em>Project Categories</em>}' containment reference.
@@ -304,9 +305,9 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Project> getProjectRevisions() {
+	public EList<ProjectRevision> getProjectRevisions() {
 		if (projectRevisions == null) {
-			projectRevisions = new EObjectContainmentEList<Project>(Project.class, this, DecobatPackage.PROJECT__PROJECT_REVISIONS);
+			projectRevisions = new EObjectContainmentEList<ProjectRevision>(ProjectRevision.class, this, DecobatPackage.PROJECT__PROJECT_REVISIONS);
 		}
 		return projectRevisions;
 	}
@@ -469,7 +470,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 				return;
 			case DecobatPackage.PROJECT__PROJECT_REVISIONS:
 				getProjectRevisions().clear();
-				getProjectRevisions().addAll((Collection<? extends Project>)newValue);
+				getProjectRevisions().addAll((Collection<? extends ProjectRevision>)newValue);
 				return;
 			case DecobatPackage.PROJECT__PROJECT_CATEGORIES:
 				setProjectCategories((ProjectCategory)newValue);

@@ -164,7 +164,7 @@ public interface Project extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Project Revisions</b></em>' containment reference list.
-	 * The list contents are of type {@link decobat.Project}.
+	 * The list contents are of type {@link decobat.ProjectRevision}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Project Revisions</em>' containment reference list isn't clear,
@@ -176,7 +176,7 @@ public interface Project extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Project> getProjectRevisions();
+	EList<ProjectRevision> getProjectRevisions();
 
 	/**
 	 * Returns the value of the '<em><b>Project Categories</b></em>' containment reference.
