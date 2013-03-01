@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.intellicod.rcp.e4.decobatEMF/src" modelPluginID="com.intellicod.rcp.e4.decobatEMF"
+    modelName="Decobat" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>decobat.ecore</foreignModel>
+  <genPackages prefix="Decobat" disposableProviderFactory="true" ecorePackage="decobat.ecore#/">
+    <genClasses ecoreClass="decobat.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Project/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Project/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Project/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Project/closed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/projectRevisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/projectCategories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/plans"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//ProjectCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectCategory/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectCategory/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectCategory/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectCategory/created"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//ProjectRevision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectRevision/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectRevision/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectRevision/update"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectRevision/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Library">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/update"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Library/categories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Library/depth"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//LibraryCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//LibraryCategory/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//LibraryCategory/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//LibraryCategory/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//LibraryCategory/created"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/update"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/unitCostPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/unitBilledPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/unitWeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Product/depth"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference decobat.ecore#//Product/supplier"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Supplier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/zip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/fax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Supplier/email"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/hourlyCostPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Service/hourlyBilledPrice"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Plan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Plan/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Plan/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Plan/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Plan/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Plan/levels"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Level">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Level/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Level/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Level/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Level/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference decobat.ecore#//Level/libraryItems"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Object">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/shortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference decobat.ecore#//Object/libraryItems"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
