@@ -2,6 +2,7 @@
  */
 package decobat.impl;
 
+import decobat.Customer;
 import decobat.DecobatFactory;
 import decobat.DecobatPackage;
 import decobat.Level;
@@ -105,6 +106,13 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 	 * @generated
 	 */
 	private EClass objectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass customerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -246,6 +254,15 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 	 */
 	public EReference getProject_Plans() {
 		return (EReference)projectEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProject_Customer() {
+		return (EReference)projectEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -910,6 +927,96 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCustomer() {
+		return customerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Code() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Name() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Address() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Zip() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_City() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Country() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Fax() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Phone() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Email() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DecobatFactory getDecobatFactory() {
 		return (DecobatFactory)getEFactoryInstance();
 	}
@@ -942,6 +1049,7 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 		createEReference(projectEClass, PROJECT__PROJECT_REVISIONS);
 		createEReference(projectEClass, PROJECT__PROJECT_CATEGORIES);
 		createEReference(projectEClass, PROJECT__PLANS);
+		createEReference(projectEClass, PROJECT__CUSTOMER);
 
 		projectCategoryEClass = createEClass(PROJECT_CATEGORY);
 		createEAttribute(projectCategoryEClass, PROJECT_CATEGORY__NAME);
@@ -1025,6 +1133,17 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 		createEAttribute(objectEClass, OBJECT__SHORT_DESCRIPTION);
 		createEAttribute(objectEClass, OBJECT__DESCRIPTION);
 		createEReference(objectEClass, OBJECT__LIBRARY_ITEMS);
+
+		customerEClass = createEClass(CUSTOMER);
+		createEAttribute(customerEClass, CUSTOMER__CODE);
+		createEAttribute(customerEClass, CUSTOMER__NAME);
+		createEAttribute(customerEClass, CUSTOMER__ADDRESS);
+		createEAttribute(customerEClass, CUSTOMER__ZIP);
+		createEAttribute(customerEClass, CUSTOMER__CITY);
+		createEAttribute(customerEClass, CUSTOMER__COUNTRY);
+		createEAttribute(customerEClass, CUSTOMER__FAX);
+		createEAttribute(customerEClass, CUSTOMER__PHONE);
+		createEAttribute(customerEClass, CUSTOMER__EMAIL);
 	}
 
 	/**
@@ -1066,6 +1185,7 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 		initEReference(getProject_ProjectRevisions(), this.getProjectRevision(), null, "projectRevisions", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_ProjectCategories(), this.getProjectCategory(), null, "projectCategories", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Plans(), this.getPlan(), null, "plans", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Customer(), this.getCustomer(), null, "customer", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectCategoryEClass, ProjectCategory.class, "ProjectCategory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProjectCategory_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProjectCategory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1149,6 +1269,17 @@ public class DecobatPackageImpl extends EPackageImpl implements DecobatPackage {
 		initEAttribute(getObject_ShortDescription(), ecorePackage.getEString(), "shortDescription", null, 0, 1, decobat.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getObject_Description(), ecorePackage.getEString(), "description", null, 0, 1, decobat.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getObject_LibraryItems(), this.getLibrary(), null, "libraryItems", null, 0, -1, decobat.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCustomer_Code(), ecorePackage.getEString(), "code", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Address(), ecorePackage.getEString(), "address", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Zip(), ecorePackage.getEString(), "zip", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_City(), ecorePackage.getEString(), "city", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Country(), ecorePackage.getEString(), "country", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Fax(), ecorePackage.getEString(), "fax", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Phone(), ecorePackage.getEString(), "phone", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Email(), ecorePackage.getEString(), "email", null, 0, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

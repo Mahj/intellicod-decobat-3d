@@ -14,6 +14,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/projectRevisions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/projectCategories"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/plans"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference decobat.ecore#//Project/customer"/>
     </genClasses>
     <genClasses ecoreClass="decobat.ecore#//ProjectCategory">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//ProjectCategory/name"/>
@@ -97,6 +98,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/shortDescription"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Object/description"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference decobat.ecore#//Object/libraryItems"/>
+    </genClasses>
+    <genClasses ecoreClass="decobat.ecore#//Customer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/zip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/fax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute decobat.ecore#//Customer/email"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

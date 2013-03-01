@@ -2,6 +2,7 @@
  */
 package decobat.util;
 
+import decobat.Customer;
 import decobat.DecobatPackage;
 import decobat.Level;
 import decobat.Library;
@@ -120,6 +121,10 @@ public class DecobatAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObject(decobat.Object object) {
 				return createObjectAdapter();
+			}
+			@Override
+			public Adapter caseCustomer(Customer object) {
+				return createCustomerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -292,6 +297,20 @@ public class DecobatAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link decobat.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see decobat.Customer
+	 * @generated
+	 */
+	public Adapter createCustomerAdapter() {
 		return null;
 	}
 

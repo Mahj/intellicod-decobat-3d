@@ -2,6 +2,7 @@
  */
 package decobat.util;
 
+import decobat.Customer;
 import decobat.DecobatPackage;
 import decobat.Level;
 import decobat.Library;
@@ -139,6 +140,12 @@ public class DecobatSwitch<T> extends Switch<T> {
 			case DecobatPackage.OBJECT: {
 				decobat.Object object = (decobat.Object)theEObject;
 				T result = caseObject(object);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DecobatPackage.CUSTOMER: {
+				Customer customer = (Customer)theEObject;
+				T result = caseCustomer(customer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,6 +315,21 @@ public class DecobatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObject(decobat.Object object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomer(Customer object) {
 		return null;
 	}
 

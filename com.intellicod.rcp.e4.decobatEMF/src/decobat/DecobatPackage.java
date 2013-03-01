@@ -138,13 +138,22 @@ public interface DecobatPackage extends EPackage {
 	int PROJECT__PLANS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Customer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__CUSTOMER = 8;
+
+	/**
 	 * The number of structural features of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = 8;
+	int PROJECT_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link decobat.impl.ProjectCategoryImpl <em>Project Category</em>}' class.
@@ -905,6 +914,107 @@ public interface DecobatPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link decobat.impl.CustomerImpl <em>Customer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see decobat.impl.CustomerImpl
+	 * @see decobat.impl.DecobatPackageImpl#getCustomer()
+	 * @generated
+	 */
+	int CUSTOMER = 11;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__CODE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__ADDRESS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Zip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__ZIP = 3;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__CITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__COUNTRY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Fax</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__FAX = 6;
+
+	/**
+	 * The feature id for the '<em><b>Phone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__PHONE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__EMAIL = 8;
+
+	/**
+	 * The number of structural features of the '<em>Customer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_FEATURE_COUNT = 9;
+
+
+	/**
 	 * Returns the meta object for class '{@link decobat.Project <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1001,6 +1111,17 @@ public interface DecobatPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProject_Plans();
+
+	/**
+	 * Returns the meta object for the reference '{@link decobat.Project#getCustomer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Customer</em>'.
+	 * @see decobat.Project#getCustomer()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_Customer();
 
 	/**
 	 * Returns the meta object for class '{@link decobat.ProjectCategory <em>Project Category</em>}'.
@@ -1796,6 +1917,115 @@ public interface DecobatPackage extends EPackage {
 	EReference getObject_LibraryItems();
 
 	/**
+	 * Returns the meta object for class '{@link decobat.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer</em>'.
+	 * @see decobat.Customer
+	 * @generated
+	 */
+	EClass getCustomer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see decobat.Customer#getCode()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see decobat.Customer#getName()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getAddress <em>Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Address</em>'.
+	 * @see decobat.Customer#getAddress()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Address();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getZip <em>Zip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Zip</em>'.
+	 * @see decobat.Customer#getZip()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Zip();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getCity <em>City</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>City</em>'.
+	 * @see decobat.Customer#getCity()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_City();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Country</em>'.
+	 * @see decobat.Customer#getCountry()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Country();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getFax <em>Fax</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fax</em>'.
+	 * @see decobat.Customer#getFax()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Fax();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getPhone <em>Phone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Phone</em>'.
+	 * @see decobat.Customer#getPhone()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Phone();
+
+	/**
+	 * Returns the meta object for the attribute '{@link decobat.Customer#getEmail <em>Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email</em>'.
+	 * @see decobat.Customer#getEmail()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_Email();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1890,6 +2120,14 @@ public interface DecobatPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROJECT__PLANS = eINSTANCE.getProject_Plans();
+
+		/**
+		 * The meta object literal for the '<em><b>Customer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROJECT__CUSTOMER = eINSTANCE.getProject_Customer();
 
 		/**
 		 * The meta object literal for the '{@link decobat.impl.ProjectCategoryImpl <em>Project Category</em>}' class.
@@ -2494,6 +2732,88 @@ public interface DecobatPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OBJECT__LIBRARY_ITEMS = eINSTANCE.getObject_LibraryItems();
+
+		/**
+		 * The meta object literal for the '{@link decobat.impl.CustomerImpl <em>Customer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see decobat.impl.CustomerImpl
+		 * @see decobat.impl.DecobatPackageImpl#getCustomer()
+		 * @generated
+		 */
+		EClass CUSTOMER = eINSTANCE.getCustomer();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__CODE = eINSTANCE.getCustomer_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__NAME = eINSTANCE.getCustomer_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__ADDRESS = eINSTANCE.getCustomer_Address();
+
+		/**
+		 * The meta object literal for the '<em><b>Zip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__ZIP = eINSTANCE.getCustomer_Zip();
+
+		/**
+		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__CITY = eINSTANCE.getCustomer_City();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__COUNTRY = eINSTANCE.getCustomer_Country();
+
+		/**
+		 * The meta object literal for the '<em><b>Fax</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__FAX = eINSTANCE.getCustomer_Fax();
+
+		/**
+		 * The meta object literal for the '<em><b>Phone</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__PHONE = eINSTANCE.getCustomer_Phone();
+
+		/**
+		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__EMAIL = eINSTANCE.getCustomer_Email();
 
 	}
 

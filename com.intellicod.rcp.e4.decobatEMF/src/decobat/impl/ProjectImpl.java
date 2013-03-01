@@ -2,6 +2,7 @@
  */
 package decobat.impl;
 
+import decobat.Customer;
 import decobat.DecobatPackage;
 import decobat.Plan;
 import decobat.Project;
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link decobat.impl.ProjectImpl#getProjectRevisions <em>Project Revisions</em>}</li>
  *   <li>{@link decobat.impl.ProjectImpl#getProjectCategories <em>Project Categories</em>}</li>
  *   <li>{@link decobat.impl.ProjectImpl#getPlans <em>Plans</em>}</li>
+ *   <li>{@link decobat.impl.ProjectImpl#getCustomer <em>Customer</em>}</li>
  * </ul>
  * </p>
  *
@@ -175,6 +177,16 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * @ordered
 	 */
 	protected Plan plans;
+
+	/**
+	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCustomer()
+	 * @generated
+	 * @ordered
+	 */
+	protected Customer customer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -403,6 +415,44 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Customer getCustomer() {
+		if (customer != null && customer.eIsProxy()) {
+			InternalEObject oldCustomer = (InternalEObject)customer;
+			customer = (Customer)eResolveProxy(oldCustomer);
+			if (customer != oldCustomer) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DecobatPackage.PROJECT__CUSTOMER, oldCustomer, customer));
+			}
+		}
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer basicGetCustomer() {
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCustomer(Customer newCustomer) {
+		Customer oldCustomer = customer;
+		customer = newCustomer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DecobatPackage.PROJECT__CUSTOMER, oldCustomer, customer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -440,6 +490,9 @@ public class ProjectImpl extends EObjectImpl implements Project {
 				return getProjectCategories();
 			case DecobatPackage.PROJECT__PLANS:
 				return getPlans();
+			case DecobatPackage.PROJECT__CUSTOMER:
+				if (resolve) return getCustomer();
+				return basicGetCustomer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -478,6 +531,9 @@ public class ProjectImpl extends EObjectImpl implements Project {
 			case DecobatPackage.PROJECT__PLANS:
 				setPlans((Plan)newValue);
 				return;
+			case DecobatPackage.PROJECT__CUSTOMER:
+				setCustomer((Customer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -514,6 +570,9 @@ public class ProjectImpl extends EObjectImpl implements Project {
 			case DecobatPackage.PROJECT__PLANS:
 				setPlans((Plan)null);
 				return;
+			case DecobatPackage.PROJECT__CUSTOMER:
+				setCustomer((Customer)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -542,6 +601,8 @@ public class ProjectImpl extends EObjectImpl implements Project {
 				return projectCategories != null;
 			case DecobatPackage.PROJECT__PLANS:
 				return plans != null;
+			case DecobatPackage.PROJECT__CUSTOMER:
+				return customer != null;
 		}
 		return super.eIsSet(featureID);
 	}

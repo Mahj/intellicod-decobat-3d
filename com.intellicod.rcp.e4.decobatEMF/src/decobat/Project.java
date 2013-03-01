@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link decobat.Project#getProjectRevisions <em>Project Revisions</em>}</li>
  *   <li>{@link decobat.Project#getProjectCategories <em>Project Categories</em>}</li>
  *   <li>{@link decobat.Project#getPlans <em>Plans</em>}</li>
+ *   <li>{@link decobat.Project#getCustomer <em>Customer</em>}</li>
  * </ul>
  * </p>
  *
@@ -229,5 +230,31 @@ public interface Project extends EObject {
 	 * @generated
 	 */
 	void setPlans(Plan value);
+
+	/**
+	 * Returns the value of the '<em><b>Customer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customer</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customer</em>' reference.
+	 * @see #setCustomer(Customer)
+	 * @see decobat.DecobatPackage#getProject_Customer()
+	 * @model required="true"
+	 * @generated
+	 */
+	Customer getCustomer();
+
+	/**
+	 * Sets the value of the '{@link decobat.Project#getCustomer <em>Customer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Customer</em>' reference.
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	void setCustomer(Customer value);
 
 } // Project

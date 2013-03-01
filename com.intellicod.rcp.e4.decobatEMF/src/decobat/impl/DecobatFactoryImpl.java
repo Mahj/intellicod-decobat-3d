@@ -2,6 +2,7 @@
  */
 package decobat.impl;
 
+import decobat.Customer;
 import decobat.DecobatFactory;
 import decobat.DecobatPackage;
 import decobat.Level;
@@ -78,6 +79,7 @@ public class DecobatFactoryImpl extends EFactoryImpl implements DecobatFactory {
 			case DecobatPackage.PLAN: return createPlan();
 			case DecobatPackage.LEVEL: return createLevel();
 			case DecobatPackage.OBJECT: return createObject();
+			case DecobatPackage.CUSTOMER: return createCustomer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -191,6 +193,16 @@ public class DecobatFactoryImpl extends EFactoryImpl implements DecobatFactory {
 	public decobat.Object createObject() {
 		ObjectImpl object = new ObjectImpl();
 		return object;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer createCustomer() {
+		CustomerImpl customer = new CustomerImpl();
+		return customer;
 	}
 
 	/**
